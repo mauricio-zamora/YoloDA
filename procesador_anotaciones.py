@@ -14,17 +14,8 @@ def convertir_anotaciones_directorio(origen, destino):
         ruta_archivo = nombre_anotacion[:nombre_anotacion.find(nombre_archivo)]
         tree = ET.parse(nombre_anotacion)
         root = tree.getroot()
-        # for child in root:
-        #     print( child.tag, child.attrib, child.text )
-        # for object in root.iter('object'):
-        #     print( object.tag, object.text )
-        #     for subobj in object:
-        #         print( subobj.tag, subobj.text )
         a = procesar_anotacion(tree)
-        # imprimir_anotation(a)
         b = reprocesar_anotacion(a)
-        # print('#######################################################################')
-        # imprimir_anotation(b)
         r = regenerarxml(b)
         escribir_xml(r, destino + nombre_archivo)
 
