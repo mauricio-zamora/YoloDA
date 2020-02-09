@@ -1,13 +1,17 @@
-from procesador_yolo_anotacion_lxml import *
-from annotation import *
+
 
 def main():
     print('Iniciando procesamiento')
-    # xml = leer_archivo2('/home/mauricio/Alicante/ImageManipulator/wrench_combination-00007.xml')
-    # imprimir_xml(xml)
-    # procesar_anotacion(xml)
-    parseXML('/home/mauricio/Alicante/ImageManipulator/wrench_combination-00007.xml')
-    # a = Annotation()
-    # imprimir_anotation(a)
+    condicion = True
+    while condicion:
+        print('+{:_^10}+{:_^60}+'.format('_', '_'))
+        print('|{:^10}|{:^60}|'.format('Opción', 'Acción a ejecutar'))
+        print('+{:_^10}+{:_^60}+'.format('_', '_'))
+        print('|{:^10}|{:^60}|'.format(1,'Establecer diretorio de trabajo'))
+        print('|{:^10}|{:^60}|'.format(2, 'Rectificar archivo de anotaciones Yolo'))
+        print('|{:^10}|{:^60}|'.format('s', 'Salir'))
+        print('+{:_^10}+{:_^60}+'.format('_', '_'))
+        entrada = input('Digite la opción S para salir\n')
+        condicion = entrada.upper() != 's'.upper()
     print('Fin del procesamiento')
 main()
