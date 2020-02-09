@@ -216,6 +216,6 @@ def main():
     # r = regenerarxml(b)
     # escribir_xml(r,'r_limpio.xml')
 
-    convertir_anotaciones_directorio('/home/mauricio/Escritorio/tools_dataset/Annotations/','/home/mauricio/Escritorio/tools_dataset/Annotations/salida/')
+    convertir_anotaciones_directorio('/home/mauricio/Descargas/Annotations/','/home/mauricio/Descargas/Annotations/salida/')
 
 main()
